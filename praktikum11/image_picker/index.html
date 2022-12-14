@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("option");
+            const list_image = ["argentina.png", "prancis.png", "kroasia.png", "marocco.png", "brazil.png", "portugal.png"]
+
+            if(pilihan.value == "argentina"){
+                let select = list_image[0];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "prancis"){
+                let select = list_image[1];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+
+            if(pilihan.value == "kroasia"){
+                let select = list_image[2];
+                document.getElementById("gambar").src = `images/${select}`
+            }
+            if(pilihan.value == "marocco"){
+                let select = list_image[3]
+                document.getElementById("gambar").src = `images/${select}`
+            } if(pilihan.value == "brazil"){
+                let select = list_image[4]
+                document.getElementById("gambar").src = `images/${select}`
+            }
+            if(pilihan.value == "portugal"){
+                let select = list_image[5]
+                document.getElementById("gambar").src = `images/${select}`
+            }
+          
+            }
+    </script>
+</head>
+<body>
+    <select name="" id="option" onchange="image_picker()">
+        <option value="">---Pilih Gambar---</option>
+        <option value="argentina">Argentina</option>
+        <option value="prancis">Prancis</option>
+        <option value="kroasia">Krosia</option>
+        <option value="marocco">Marocco</option>
+        <option value="brazil">Brazil</option>
+        <option value="portugal">Portugal</option>
+    </select>
+
+    <div class="container">
+        <div class="box">
+            <img id="gambar" src="images/piala.png">
+        </div>
+    </div>
+</body>
+</html>
